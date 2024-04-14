@@ -13,7 +13,6 @@ displayList(words);
 // Displays the words in all-capital letters.
 // On-click function for button id="caps"
 function capitalise() {
-    console.log("test");
     document.getElementById("wordlist").style.color = "black";
     let newList = words.map(caps);
     displayList(newList);
@@ -36,13 +35,21 @@ redButton.addEventListener("click", function() {
 const swapButton = document.getElementById("swap");
 swapButton.addEventListener("click", swapList);
 
+//
 function swapList() {
     document.getElementById("wordlist").style.color = "black";
     let newList = words.map(swap);
+    displayList(newList);
 }
 
+// Returns the given text with the first and last letter switched.
 function swap(text) {
-    console.log(text.substring(1, text.length - 1));
+    // console.log(text.substring(1, text.length - 1));
+    // let first = text.charAt(0);
+    // let last = text.charAt(text.length - 1);
+    // let newText = last + text.substring(1, text.length - 1) + first;
+    // console.log(newText);
+    return text.charAt(text.length - 1) + text.substring(1, text.length - 1) + text.charAt(0);
 }
 
 
