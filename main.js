@@ -35,7 +35,7 @@ redButton.addEventListener("click", function() {
 const swapButton = document.getElementById("swap");
 swapButton.addEventListener("click", swapList);
 
-//
+// Displays the words with the first and last letters swapped.
 function swapList() {
     document.getElementById("wordlist").style.color = "black";
     let newList = words.map(swap);
